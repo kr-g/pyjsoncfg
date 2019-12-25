@@ -1,0 +1,46 @@
+{
+    "a": 1,
+    "b": 1.0,
+    "c": true,
+    "dummy_array": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "dummy_complex": {
+        "a": 4,
+        "d": {
+            "da": 1,
+            "db": 1.0,
+            "dc": true,
+            "dc_0": "",
+            "dc_1": "True",
+            "dd": [
+                1,
+                3
+            ]
+        },
+        "e": false
+    },
+    "host": {
+        "remote-ip": "*** remote ***"
+    },
+    "passwd": "*** pass ***",
+    "remote": "*** remote ***",
+    "remote-url": {
+        "default-port": "8266",
+        "host": "*** host ***",
+        "password": "*** pass ***",
+        "port": "*** port ***",
+        "url": "*** url ***"
+    },
+    "rootuser": {
+        "pass": "*** pass ***",
+        "pass_default": "my-secrect",
+        "user": "*** user ***"
+    },
+    "secret-hash": "*** secret ***",
+    "user": "*** user ***"
+}
