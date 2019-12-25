@@ -25,7 +25,8 @@ The environment variable `PYJSONCONFIG_BASE` (default: `"."`) is used to find th
 Run `pyjsoncfg` from cmd-line to create a sanitized config file using your real configuration as template.
 
 pyjsoncfg checks for keywords like `"user", "pass", "url", "host", "remote", "port"`.
-The corresponding values are replaced by dummy values.
+The corresponding values are replaced by dummy values. 
+Keywords containing `"default"` as part of their keyword are __not__ replaced by a dummy value.
 Use parameter `-k you_secret_key1` `-k you_secret_key2`... to add additional keywords to scan and replace for.
 
     python3 -m pyjsoncfg -f sample_cfg.json -k secret 
