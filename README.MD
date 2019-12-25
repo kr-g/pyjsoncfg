@@ -109,6 +109,10 @@ After loading with `auto_conv=True` or calling `cfg.conv()` namespace selector i
     print( type( cfg().zx.b ) )
     print( type( cfg().zx.b.items() ) )
     
+    # iterate
+    for k,v in cfg().zx.b.items():
+        print(k,v)
+
     print( type( cfg().zx.b.e ) )
 
 
