@@ -66,7 +66,7 @@ In order to use a global configuration root set the environment before, or do by
 
 ## Config key navigation and selection
 
-See also `sample_cfg.json` in the github repo for the json config structure
+See also [`sample_cfg.json`](https://github.com/kr-g/pyjsoncfg/blob/master/pyjsoncfg/sample.py) in the github repo for the json config structure
 
 
 ### dict style
