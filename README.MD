@@ -119,6 +119,7 @@ After loading with `auto_conv=True` or calling `cfg.conv()` namespace selector i
 
 with `expandvars()` all vars such as `${user}` or `${host.remote_ip}` inside an eval_string can be replaced by config values.
 the default recursion level is `recursion_level=3`. change if the config file has a deeper nesting of vars.
+See also [`sample_cfg.json`](https://github.com/kr-g/pyjsoncfg/blob/master/pyjsoncfg/sample_cfg.json) for the structure.
 
     # print structure of substsample config setting
     print( "subst var sample:", cfg().substsample )
