@@ -22,7 +22,7 @@ The environment variable `PYJSONCONFIG_BASE` (default: `"."`) is used to find th
 
 ## Run as main
 
-Run pyjsoncfg from cmd-line to create a sanitized config file using your real configuration as template.
+Run `pyjsoncfg` from cmd-line to create a sanitized config file using your real configuration as template.
 
 pyjsoncfg checks for keywords like `"user", "pass", "url", "host", "remote", "port"`.
 The corresponding values are replaced by dummy values.
