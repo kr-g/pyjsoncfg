@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/kr-g/pyjsoncfg",
     packages=setuptools.find_packages(),
     license = 'MIT',
-    keywords = 'python config json micropython esp8266 esp32',
+    keywords = 'python config json',
     install_requires=[],    
     classifiers=[
         'Development Status :: 3 - Alpha',
