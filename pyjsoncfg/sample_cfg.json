@@ -1,0 +1,46 @@
+{
+    "a": 1,
+    "b": 1.0,
+    "c": true,
+    "dummy_array": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "dummy_complex": {
+        "a": 4,
+        "d": {
+            "da": 1,
+            "db": 1.0,
+            "dc": true,
+            "dc_1": "True",
+            "dc_0": "",
+            "dd": [
+                1,
+                3
+            ]
+        },
+        "e": false
+    },
+    "user" : "myprivate@email.com",
+    "passwd" : "my-secrect-passwd",
+    "secret-hash" : "13463hsdgfas2143652",
+    "rootuser" : {
+        "user" : "root",
+        "pass" : "secrect",
+        "pass_default" : "my-secrect"
+    },
+    "host" : {
+        "remote-ip" : "192.168.172.1."
+        },
+    "remote" : "192.168.172.1",
+    "remote-url" : {
+            "url" : "https://www.github.com",
+            "host" : "github.com",
+            "port" : "1234",
+            "default-port" : "8266",
+            "password" : "secrect"
+        }
+}
