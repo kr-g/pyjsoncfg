@@ -28,11 +28,11 @@ pyjsoncfg checks for keywords like `"user", "pass", "url", "host", "remote", "po
 The corresponding values are replaced by dummy values.
 Use parameter `-k you_secret_key1` `-k you_secret_key2`... to add additional keywords to scan and replace for.
 
-    python3 -m pyjsoncfg -f sample_cfg.json -k secret -d
+    python3 -m pyjsoncfg -f sample_cfg.json -k secret 
 
 use redirect to create template file rather then output to stdout
 
-    python3 -m pyjsoncfg -f sample_cfg.json -k secret -d > template_cfg.json
+    python3 -m pyjsoncfg -f sample_cfg.json -k secret > template_cfg.json
 
 
 By running `pyjsoncfg` the environment variable `PYJSONCONFIG_BASE` defaults to `"~"`
