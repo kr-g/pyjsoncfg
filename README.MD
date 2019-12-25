@@ -33,8 +33,9 @@ Use parameter `-k you_secret_key1` `-k you_secret_key2`... to add additional key
 
 use redirect to create template file rather then output to stdout
 
-    python3 -m pyjsoncfg -f sample_cfg.json -k secret > template_cfg.json
+    python3 -m pyjsoncfg -f sample_cfg.json -k secret > sanitized_sample_cfg.json
 
+A sanitized sample can be found here [sanitized_sample_cfg.json](https://github.com/kr-g/pyjsoncfg/blob/master/pyjsoncfg/sanitized_sample_cfg.json)
 
 By running `pyjsoncfg` the environment variable `PYJSONCONFIG_BASE` defaults to `"~"`
 
