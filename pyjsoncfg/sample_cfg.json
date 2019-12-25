@@ -26,21 +26,27 @@
     },
     "user" : "myprivate@email.com",
     "passwd" : "my-secrect-passwd",
-    "secret-hash" : "13463hsdgfas2143652",
+    "secret_hash" : "13463hsdgfas2143652",
     "rootuser" : {
         "user" : "root",
         "pass" : "secrect",
         "pass_default" : "my-secrect"
-    },
+    }, 
     "host" : {
-        "remote-ip" : "192.168.172.1."
+        "remote_ip" : "192.168.172.1"
         },
     "remote" : "192.168.172.1",
     "remote-url" : {
             "url" : "https://www.github.com",
             "host" : "github.com",
             "port" : "1234",
-            "default-port" : "8266",
+            "default_port" : "8266",
             "password" : "secrect"
-        }
+        },
+    "substsample" : "my user is ${user} at host ${host.remote_ip} :-)",
+    "ref_user" : "${user}",
+    "ref_user_self" : "${ref_user_self}",
+    "ref_host" : "${host.remote_ip}",
+    "substsample2" : "referencing sample. my user is ${ref_user} at host ${ref_host} :-)",
+    "substsample3" : "self-referencing sample. my user is ${ref_user_self} an endless loop!!! at host ${ref_host} :-)"
 }

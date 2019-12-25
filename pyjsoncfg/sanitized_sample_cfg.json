@@ -25,12 +25,15 @@
         "e": false
     },
     "host": {
-        "remote-ip": "*** remote ***"
+        "remote_ip": "*** remote ***"
     },
     "passwd": "*** pass ***",
+    "ref_host": "*** host ***",
+    "ref_user": "*** user ***",
+    "ref_user_self": "*** user ***",
     "remote": "*** remote ***",
     "remote-url": {
-        "default-port": "8266",
+        "default_port": "8266",
         "host": "*** host ***",
         "password": "*** pass ***",
         "port": "*** port ***",
@@ -41,6 +44,9 @@
         "pass_default": "my-secrect",
         "user": "*** user ***"
     },
-    "secret-hash": "*** secret ***",
+    "secret_hash": "*** secret ***",
+    "substsample": "my user is ${user} at host ${host.remote_ip} :-)",
+    "substsample2": "referencing sample. my user is ${ref_user} at host ${ref_host} :-)",
+    "substsample3": "self-referencing sample. my user is ${ref_user_self} an endless loop!!! at host ${ref_host} :-)",
     "user": "*** user ***"
 }

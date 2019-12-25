@@ -186,6 +186,32 @@ if __name__=='__main__':
     print( "e" in cfg().zx.b ) 
     print( "f" in cfg().zx.b ) 
 
+### expand vars
+
+    # print structure of substsample config setting
+    print( "subst var sample:", cfg().substsample )
+    # subst all vars in substsample setting within a single call
+    print( "result:", cfg.expand( cfg().substsample ) )
+    
+    # or more complicated...
+    # get all vars in the string as tupel
+    vars = cfg.getexpandvars( cfg().substsample ) # `eval_str` is populated with config value for substsample setting
+    print( "vars:", vars )
+    # get all vars and values as tupel
+    exvars = cfg.expandvars( vars ) 
+    print( "expandvars", exvars )
+    # if required manipulate expandvars beforehand
+    print( "result:", cfg.expand( cfg().substsample, expandvars=exvars ) )
+
+    # nested or referencing vars
+    print( "referencing:", cfg().substsample2 ) 
+    print( "result referencing:", cfg.expand( cfg().substsample2 ) )
+
+    # nested or referencing vars with endless loop due to self-referencing
+    # stops at `recursion_level=3`
+    print( "self-referencing:", cfg().substsample3 ) 
+    print( "result self-referencing:", cfg.expand( cfg().substsample3 ) )
+
     # save to disk
     cfg2.save()
     

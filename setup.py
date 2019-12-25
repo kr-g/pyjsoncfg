@@ -5,7 +5,7 @@ with open("README.MD", "r") as fh:
 
 setuptools.setup(
     name="pyjsoncfg", 
-    version="v0.0.2",
+    version="v0.0.3",
     author="k.r. goger",
     author_email="k.r.goger+pyjsoncfg@gmail.com",
     description="python json config file handling",

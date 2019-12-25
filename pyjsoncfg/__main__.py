@@ -8,7 +8,7 @@ except:
     from .pyjsoncfg import Config
  
 
-VERSION="v0.0.2"
+VERSION="v0.0.3"
 
 def main():
      

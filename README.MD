@@ -114,6 +114,39 @@ After loading with `auto_conv=True` or calling `cfg.conv()` namespace selector i
         print(k,v)
 
     print( type( cfg().zx.b.e ) )
+    
+### expand vars
+
+with `expandvars()` all vars such as `${user}` or `${host.remote_ip}` inside an eval_string can be replaced by config values.
+the default recursion level is `recursion_level=3`. change if the config file has a deeper nesting of vars.
+
+    # print structure of substsample config setting
+    print( "subst var sample:", cfg().substsample )
+    # subst all vars in substsample setting within a single call
+    print( "result:", cfg.expand( cfg().substsample ) )
+    
+    # or more complicated...
+    # get all vars in the string as tupel
+    vars = cfg.getexpandvars( cfg().substsample ) # `eval_str` is populated with config value for substsample setting
+    print( "vars:", vars )
+    # get all vars and values as tupel
+    exvars = cfg.expandvars( vars ) 
+    print( "expandvars", exvars )
+    # if required manipulate expandvars beforehand
+    print( "result:", cfg.expand( cfg().substsample, expandvars=exvars ) )
+
+    # nested or referencing vars
+    print( "referencing:", cfg().substsample2 ) 
+    print( "result referencing:", cfg.expand( cfg().substsample2 ) )
+
+    # nested or referencing vars with endless loop due to self-referencing
+    # stops at `recursion_level=3`
+    print( "self-referencing:", cfg().substsample3 ) 
+    print( "result self-referencing:", cfg.expand( cfg().substsample3 ) )
+  
+#### limitation of `expandvars()`
+  
+substitution of `dict` or complex json object is not supported.
 
 
 ## Code

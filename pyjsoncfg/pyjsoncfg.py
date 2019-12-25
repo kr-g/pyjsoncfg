@@ -2,8 +2,8 @@
 import os
 import sys
 
+import re
 import json
-import copy
 
 
 VERSION = "v0.0.1"
@@ -195,6 +195,42 @@ class Config:
             e[last] = val
             return val
 
+    # higher level access and var substitution
+
+    def getexpandvars(self,eval_str):
+        """extract vars such as ${user} or ${host.remote_ip} in the eval_str from the config"""
+        regex = r"\$\{([a-zA-Z\._]+)\}"
+        matches = re.finditer(regex, eval_str, re.MULTILINE)        
+        vars = []
+
+        for matchNum, match in enumerate(matches, start=1):            
+            fullmatch = match.group(0)
+            selector = match.group(1)            
+            vars.append( ( selector, fullmatch  ))
+            
+        return vars
+    
+    def expandvars(self,expandvars):
+        """expands expandvars from a former call to getexpandvars"""
+        vars = []
+        for v,s in expandvars:
+            val = self.val(self(v))
+            vars.append( (v,s,val) )
+        return vars
+    
+    def expand(self,eval_str,expandvars=None,recursion_level=3):
+        """replace vars in config by config values"""
+        while recursion_level>0:
+            recursion_level -= 1
+            vars = self.getexpandvars(eval_str)
+            if len(vars) == 0:
+                break;
+            exvars = self.expandvars(vars) if expandvars is None else expandvars 
+            for selector, fullmatch, val in exvars:
+                eval_str = eval_str.replace( fullmatch, val )
+        return eval_str
+    
+    # 
     
     def sanitize(self,addkeywords=[],_dict=None):
         
