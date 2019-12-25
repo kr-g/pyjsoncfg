@@ -35,7 +35,7 @@ use redirect to create template file rather then output to stdout
     python3 -m pyjsoncfg -f sample_cfg.json -k secret -d > template_cfg.json
 
 
-By running pyjsoncfg the environment variable `PYJSONCONFIG_BASE` defaults to `"~"`
+By running `pyjsoncfg` the environment variable `PYJSONCONFIG_BASE` defaults to `"~"`
 
 
 ## cmd-line options
@@ -113,7 +113,7 @@ After loading with `auto_conv=True` or calling `cfg.conv()` namespace selector i
 ## Code
 
     import os, sys
-    from jsoncfg import Config
+    from pyjsoncfg import Config
 
     cfg = Config(
             fnam="sample_cfg.py", # file name of json config, defaults to cfg.json

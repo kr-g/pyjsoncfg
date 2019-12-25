@@ -2,7 +2,7 @@
 import os
 import sys
 
-from jsoncfg import Config
+from pyjsoncfg import Config
 
 
 if __name__=='__main__':
@@ -178,6 +178,9 @@ if __name__=='__main__':
     print( type( cfg().zx.b.items() ) )
     
     print( type( cfg().zx.b.e ) )
+
+    print( "e" in cfg().zx.b ) 
+    print( "f" in cfg().zx.b ) 
 
     # save to disk
     cfg2.save()

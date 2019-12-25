@@ -3,10 +3,12 @@ import os
 import sys
 
 try:
-    from jsoncfg import Config
+    from pyjsoncfg import Config
 except:
-    from .jsoncfg import Config
+    from .pyjsoncfg import Config
  
+
+VERSION="v0.0.2"
 
 def main():
      
