@@ -148,6 +148,18 @@ See also [`sample_cfg.json`](https://github.com/kr-g/pyjsoncfg/blob/master/pyjso
 #### limitation of `expandvars()`
   
 substitution of `dict` or complex json object is not supported.
+extra whitespace within a variable specifier is not supported.
+
+ok:
+
+    ${user}
+    ${host.remote_ip}
+    
+not ok:
+
+    ${user } # tailing blank
+    ${ user } # leading and tailing blank
+    ${host . remote_ip} # extra white space
 
 
 ## Code
