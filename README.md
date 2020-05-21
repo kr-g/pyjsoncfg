@@ -12,7 +12,7 @@ Tested on Python3
 
 ## Development status
 
-Alpha state, 
+Beta state. The API or logical call flow might change without prior notice.
 
 # What's new ?
 
