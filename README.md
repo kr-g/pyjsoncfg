@@ -14,6 +14,12 @@ Tested on Python3
 
 Alpha state, 
 
+# What's new ?
+
+Check
+[`CHANGELOG`](https://github.com/kr-g/pyjsoncfg/blob/master/CHANGELOG.md)
+for latest ongoing, or upcoming news
+
 
 ## Configuration
 

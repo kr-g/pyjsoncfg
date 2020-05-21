@@ -6,7 +6,7 @@ import re
 import json
 
 
-VERSION = "v0.0.1"
+VERSION = "v0.0.4a"
 
 class _cfg_namespace:
     
